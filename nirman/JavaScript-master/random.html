@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>random image</title>
+	<script type="text/javascript">
+		window.onload = choosePic;
+		var theAd = 0;
+		var myPix = ["images/desert.jpg","images/koala.jpg","images/Tulips.jpg"];
+		length=myPix.length;
+
+		function choosePic() {
+			var randomNum = Math.floor(Math.random() * length);
+			document.getElementById("myPicture").src = myPix[randomNum];
+			rotate();
+		}
+
+		function rotate()
+		{
+			theAd++;
+			if(theAd == myPix.length)
+			{
+				theAd=0;
+			}
+			document.getElementById("myPicture").src = myPix[theAd];
+			setTimeout(rotate, 3 * 1000);
+		}
+
+	</script>
+</head>
+<body>
+
+	<img src="images/desert.jpg" width="305" height="312" id="myPicture" alt="some image">
+
+
+</body>
+</html>

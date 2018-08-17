@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roll over image</title>
+	<script type="text/javascript">
+		function rollover(my_image)
+		{
+			my_image.src = 'images/desert.jpg';
+		}
+
+		function mouseaway(my_image)
+		{
+			my_image.src = 'images/koala.jpg';
+		}
+	</script>
+</head>
+<body>
+
+	<img src="images/koala.jpg" onmouseover="rollover(this)" onmouseout="mouseaway(this)" />
+
+</body>
+</html>
